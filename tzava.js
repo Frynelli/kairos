@@ -1,8 +1,3 @@
-<link
-  rel="stylesheet"
-  href="/Users/StargateAIR/Desktop/kairosFrynelli/kairos/looks.css"
-/>;
-
 let current = new Date();
 function addZero(i) {
   if (i < 10) {
