@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="src/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/Users/StargateAIR/Desktop/Frynelli/VS coding projects/SheCodesPlus/week2/style.css"
+    />
+  </head>
+
+  <body>
+    
+    
+      <div class="navbar">
+        <form id="city-form">
+          <div class="inputs">
+          <input  id="city-input" class="text" type="text" placeholder="City" />
+          <input id="search-button" class="submit" type="submit" value="Search" />
+          </div>
+          <div class="trial">
+          <button id="next" type="submit">
+            Current
+          </button>
+          </div>
+        </form>
+      </div>
+          
+    
+
+      <br />
+
+      <div class="container_first">
+        <div class="top">
+          <h1 id="put-the-city">Athens</h1>
+          <h4 id="full-day">29/10/21</h4>
+        </div>
+        <img
+          class="firstpic"
+          src="https://user-images.githubusercontent.com/90149135/140407101-7fb0cbdc-0e0b-4344-8e41-b9582d15aa93.png"
+          alt="sun"
+        />
+
+        <div id="lrm">
+          <span  class="left">
+            <h4>LO</h4>
+            <h6 id="left-lo">16</h6><a id="a-c-left"  class="celc-fahr" href="#c-left">ºC</a><a id="a-f-left" class="celc-fahr" href="#f-left">ºF</a></a>
+          </span>
+
+          <span class="now">
+            <h4>NOW</h4>
+            <h6 id="center">19</h6><a id="a-c-center" class="celc-fahr" href="#c-center">ºC</a><a id="a-f-center" class="celc-fahr" href="#f-center">ºF</a>
+          </span>
+
+          <span class="right">
+            <h4>HI</h4>
+            <h6 id="right-hi">23</h6><a id="a-c-right" class="celc-fahr" href="#c-right">ºC</a><a id="a-f-right" class="celc-fahr" href="#f-right">ºF</a></a>
+          </span>
+        </div>
+        <div class="forecast_container">
+          <h5 class="weekly">Weekly forecast</h5>
+          <div class="forecast">
+            <ul class="monday">
+              <strong class="day">Mon</strong>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-brightness-high"
+                viewBox="0 0 16 16"
+                class="bi"
+              >
+                <path
+                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                />
+              </svg>
+              <div class="hilo1">
+                <div class="hilo">
+                  <li>HI</li>
+                  <li>LO</li>
+                </div>
+                <div class="hilotemp">
+                  <em>23ºC</em>
+                  <em>12ºC</em>
+                </div>
+              </div>
+            </ul>
+            <ul class="tuesday">
+              <strong class="day">Tue</strong>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-cloud-lightning-rain"
+                viewBox="0 0 16 16"
+                class="bi"
+              >
+                <path
+                  d="M2.658 11.026a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-7.5 1.5a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-.753-8.499a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973zM8.5 1a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 1zM7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724l1-2z"
+                />
+              </svg>
+              <div class="hilo1">
+                <div class="hilo">
+                  <li>HI</li>
+                  <li>LO</li>
+                </div>
+                <div class="hilotemp">
+                  <em>17ºC</em>
+                  <em>12ºC</em>
+                </div>
+              </div>
+            </ul>
+            <ul class="wendesday">
+              <strong class="day">Wen</strong>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-cloud-rain-heavy"
+                viewBox="0 0 16 16"
+                class="bi"
+              >
+                <path
+                  d="M4.176 11.032a.5.5 0 0 1 .292.643l-1.5 4a.5.5 0 1 1-.936-.35l1.5-4a.5.5 0 0 1 .644-.293zm3 0a.5.5 0 0 1 .292.643l-1.5 4a.5.5 0 1 1-.936-.35l1.5-4a.5.5 0 0 1 .644-.293zm3 0a.5.5 0 0 1 .292.643l-1.5 4a.5.5 0 1 1-.936-.35l1.5-4a.5.5 0 0 1 .644-.293zm3 0a.5.5 0 0 1 .292.643l-1.5 4a.5.5 0 0 1-.936-.35l1.5-4a.5.5 0 0 1 .644-.293zm.229-7.005a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973zM8.5 1a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 1z"
+                />
+              </svg>
+              <div class="hilo1">
+                <div class="hilo">
+                  <li>HI</li>
+                  <li>LO</li>
+                </div>
+                <div class="hilotemp">
+                  <em>20ºC</em>
+                  <em>15ºC</em>
+                </div>
+              </div>
+            </ul>
+            <ul class="thursday">
+              <strong class="day">Thu</strong>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-cloud-sun"
+                viewBox="0 0 16 16"
+                class="bi"
+              >
+                <path
+                  d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .624.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .51-.375A3.502 3.502 0 0 1 7 8zm4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z"
+                />
+                <path
+                  d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708l.707-.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708l-.708-.707zm1.734 3.374a2 2 0 1 1 3.296 2.198c.199.281.372.582.516.898a3 3 0 1 0-4.84-3.225c.352.011.696.055 1.028.129zm4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377zM14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"
+                />
+              </svg>
+              <div class="hilo1">
+                <div class="hilo">
+                  <li>HI</li>
+                  <li>LO</li>
+                </div>
+                <div class="hilotemp">
+                  <em>26ºC</em>
+                  <em>15ºC</em>
+                </div>
+              </div>
+            </ul>
+            <ul class="friday">
+              <strong class="day">Fri</strong>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-cloud-sun"
+                viewBox="0 0 16 16"
+                class="bi"
+              >
+                <path
+                  d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .624.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .51-.375A3.502 3.502 0 0 1 7 8zm4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z"
+                />
+                <path
+                  d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708l.707-.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708l-.708-.707zm1.734 3.374a2 2 0 1 1 3.296 2.198c.199.281.372.582.516.898a3 3 0 1 0-4.84-3.225c.352.011.696.055 1.028.129zm4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377zM14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"
+                />
+              </svg>
+              <div class="hilo1">
+                <div class="hilo">
+                  <li>HI</li>
+                  <li>LO</li>
+                </div>
+                <div class="hilotemp">
+                  <em>23ºC</em>
+                  <em>12ºC</em>
+                </div>
+              </div>
+            </ul>
+            <ul class="saturday">
+              <strong class="day">Sat</strong>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-sun"
+                viewBox="0 0 16 16"
+                class="bi"
+              >
+                <path
+                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                />
+              </svg>
+              <div class="hilo1">
+                <div class="hilo">
+                  <li>HI</li>
+                  <li>LO</li>
+                </div>
+                <div class="hilotemp">
+                  <em>23ºC</em>
+                  <em>12ºC</em>
+                </div>
+              </div>
+            </ul>
+            <ul class="sunday">
+              <strong class="day">Sun</strong>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-sun"
+                viewBox="0 0 16 16"
+                class="bi"
+              >
+                <path
+                  d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                />
+              </svg>
+              <div class="hilo1">
+                <div class="hilo">
+                  <li>HI</li>
+                  <li>LO</li>
+                </div>
+                <div class="hilotemp">
+                  <em>23ºC</em>
+                  <em>12ºC</em>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div class="widget">
+          <input class="time" type="time" />
+          <ul class="widgtemp1">
+            <strong>Temperature</strong>
+            <li>18ºC</li>
+          </ul>
+          <ul class="widgtemp2">
+            <strong>Feels Like</strong>
+            <li>18ºC</li>
+          </ul>
+          <label>Thunderstorm</label>
+          <img
+            class="thunder"
+            src="https://user-images.githubusercontent.com/90149135/140407700-f52571e7-c425-40f1-9f0a-15857091d13c.png"
+            alt="thunderstorm"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="/Users/StargateAIR/Desktop/Frynelli/VS coding projects/SheCodesPlus/week2/javaCode.js"></script>
+  </body>
+  <footer>Coded by Frynelli</footer>
+</html>
